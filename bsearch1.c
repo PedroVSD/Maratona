@@ -1,4 +1,4 @@
-//Concertar
+//Refazer porque não está 100%
 
 #include <stdio.h>
 

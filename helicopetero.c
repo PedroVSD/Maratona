@@ -1,3 +1,4 @@
+//Refazer porque não está 100%
 #include <stdio.h>
 
 int main(){
@@ -16,6 +17,7 @@ int main(){
     
     scanf("%d", &dire);
 
+    
     //-1 para horário e 1 para anti-horário
 
     if(dire == 1){
