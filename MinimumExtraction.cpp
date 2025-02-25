@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -26,13 +27,15 @@ int solve(){
 
     cin >> n;
 
-    int a[n];
+    //int a[n];
+    vector<int> a(n);
 
     for(auto &i: a){
         cin >> i;
     }
 
-    sort(a, a+n);
+    //sort(a, a + n);
+    sort(a.begin(), a.end());
 
     int res = a[0];
 
