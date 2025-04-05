@@ -16,7 +16,7 @@ struct Node{
 
 
 
-void bfs(queue<int> q, int flag, Node* root);
+void bfs(int flag, Node* root);
 
 
 int main(void){
@@ -28,7 +28,7 @@ int main(void){
     
 }
 
-void bfs(queue<int> q, int flag, Node* root){
+void bfs(int flag, Node* root){
     if(root == NULL){
         return;
     }
