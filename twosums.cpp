@@ -1,4 +1,72 @@
-#include <stdio.h>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
+
+using namespace std;
+
+vector<int> twoSum(vector<int>& nums, int target);
+
+int main(void){
+
+}
+
+vector<int> twoSum(vector<int>& nums, int target) {
+    unordered_map<int, int> map;
+
+    int i = 0;
+    for(int number : nums){
+        map[number] = i++;
+    }
+
+    for(int j = 0; j < nums.size(); j++){
+        int numero_atual = nums[j];
+
+        auto encontra_atual = map.find(numero_atual);
+        if(encontra_atual != map.end()){
+            return {encontra_atual -> second, j};
+        }
+        map[target - numero_atual] = j;
+    }
+    return {};
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#include <stdio.h>
 #include <stdlib.h>
 
 int* somadois(int *v, int n, int x) {
@@ -37,4 +105,4 @@ int main() {
     }
     
     return 0;
-}
+}*/
