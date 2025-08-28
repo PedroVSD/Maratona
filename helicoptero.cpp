@@ -1,19 +1,33 @@
 //arrumar
-# include<stdio.h>
+#include <vector>
+#include <iostream>
+
+using namespace std;
 
 int main(){
 
-    int h, p ,f, d;
-    scanf("%d %d %d %d", &h, &p, &f, &d);
+    int h,p,f,d;
+    
+    cin >> h >> p >> f >> d;
 
+    int atual = f;
 
-    if(d == -1 && f > h && p > f || p < h){
-        printf("S\n");
-    } else if(d == 1 && f < h && p > f || p > h){
-        printf("S\n");
-    } else {
-        printf("N\n");
-        
+    while(true){
+        if(atual == h){
+            cout << "S" << endl;
+            break;
+        }
+        if(atual == p){
+            cout << "N" << endl;
+            break;
+        }
+
+        if(d == 1){
+            atual = (atual + 1)%16;
+        }else{
+            atual = (atual - 1 + 16)%16;
+        }
+
     }
 
     return 0;
