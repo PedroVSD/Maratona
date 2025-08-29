@@ -94,11 +94,13 @@ Node* DFSflag_posorder(Node* root, int flag){
     }
 
     Node* leftResult = DFSflag_posorder(root->left, flag);
+
     if(leftResult != NULL){
         return leftResult;
     }
 
     Node* rightResult = DFSflag_posorder(root->right, flag);
+    
     if(rightResult != NULL){
         return rightResult;
     }
