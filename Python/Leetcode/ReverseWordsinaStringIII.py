@@ -1,5 +1,6 @@
+#557 ReverseWordsinaStringIII
 class Solution:
-    def reverseWords_manual(s): #O(n) both
+    def reverseWords_manual(s):
         res = ''
         l , r = 0, 0
 
